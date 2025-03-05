@@ -1,0 +1,35 @@
+/* Fondo con degradado */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    overflow: hidden;
+}
+
+/* Círculo animado */
+.circulo {
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: absolute;
+    animation: moverZigZag 3s infinite alternate ease-in-out, cambiarColor 3s infinite alternate;
+}
+
+/* Animación en zigzag */
+@keyframes moverZigZag {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(100px, -50px); }
+    50% { transform: translate(200px, 0); }
+    75% { transform: translate(300px, -50px); }
+    100% { transform: translate(400px, 0); }
+}
+
+/* Animación de cambio de color */
+@keyframes cambiarColor {
+    0% { background-color: yellow; }
+    50% { background-color: red; }
+    100% { background-color: cyan; }
+}
